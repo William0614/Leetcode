@@ -1,0 +1,8 @@
+Quick sort:
+based on divide & conquer strategy.
+The array of elements is divided repeatedly until it is not possible to divide it further.
+Known as "partition exchange sort".
+Uses "Pivot"(key element) for partitioning the elements.
+One left partition contains all the smaller elements than the pivot.
+One right partition contains all the greater elements than the pivot.
+
