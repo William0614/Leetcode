@@ -1,8 +1,60 @@
-Quick sort:
+Quick sort: internal algorithm
+
+time complexity = O(nlog n)
+best case = O(n log n)
+average case = O(nlogn)
+worst case = O(n^2)
+worst case occurs when the array is already sorted and the pivot element is always chosen as the first or the last element of the array.
+To avoid this, use ranodmized pivot or other strategies, such as taking the median of three.
+
 based on divide & conquer strategy.
 The array of elements is divided repeatedly until it is not possible to divide it further.
 Known as "partition exchange sort".
 Uses "Pivot"(key element) for partitioning the elements.
 One left partition contains all the smaller elements than the pivot.
 One right partition contains all the greater elements than the pivot.
+
+limitations of qsort: It is not stable. With two elements with the same key, their relative order will not be preserved as qsort swaps
+elements according to their position relative to the pivot.
+
+10, 80, 90, 50, 30, 70
+
+Any number can be picked as the pivot. First, last, random does not matter.
+
+1. take the last element as pivot = 70.
+2. since 10 < 70, swap 10 with 10.
+3. since 80>70, no swap.
+4. 90>70. no swap.
+5. 50<70. swap with 80.
+
+10, 50, 90, 80, 30, 70
+
+6. 30<70. swap with 50.
+
+10, 30, 90, 80, 50, 70.
+
+7. 
+
+https://opendsa-server.cs.vt.edu/embed/quicksortAV
+
+
+left partition:
+10, 50, 30
+
+Merge Sort: External algorithm
+
+divide and conquer strategy.
+The elements are split into two sub-arrays (n/2) again and again until only one element is left.
+Merge sort uses additional storage for sorting the auxiliary array.
+Merge sort uses three arrays where two are used for storing each half, and the third external one is used to store the final sorted 
+list by merging other two and each array is then sorted recursively.
+At last, the all sub arrays are merged to make it ‘n’ element size of the array.
+
+time complexity: O(nlogn) same for worst and average case.
+
+Usage with datasets : Merge sort can work well on any type of data sets irrespective of its size (either large or small). 
+whereas quick sort cannot work well with large datasets.
+
+
+https://www.geeksforgeeks.org/quick-sort-vs-merge-sort/
 
