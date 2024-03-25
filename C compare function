@@ -1,0 +1,23 @@
+C sorting / compare
+
+to sort in ascending order:
+ 
+int compare(const void* a, const void* b) {
+  int a1 = *(int*)a;
+  int b1 = *(int*)b;
+
+// int a1 = *(int*)a; this means that we assign an integer value a1, to the value of a which has been casted with the integer pointer type.
+
+// (int*)a is "the original pointer, converted to an int* so that I can read an int from it", and *(int*)number is the int value that it points to.
+// Use it when it knows that it is pointing to an integer type.
+//*a means it is dereferencing a - it gets the value of
+
+  if(a1>b1) return 1; //anything other than 0 is true. 0 is false.
+  else if(a1<b1) return -1;
+  else return 0;
+}
+
+to sort in descending order, return -1 when a>b and 1 when a<-b.
+
+qsort(arr, array_size, sizeof(int), compare);
+
