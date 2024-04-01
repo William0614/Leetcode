@@ -1,0 +1,15 @@
+++i will increment the value beforehand and return the incremented value of i.
+i=1;
+j=++i;
+return i, j;
+i=2, j=2;
+
+i++ will increment the value after its line is run. It will return the original value of i, and then increment the value of i.
+i=1;
+j=i++;
+return i, j;
+i=2, j=1;
+
+for a for loop any kind is common. Prefer to use ++i to avoid confusion.
+
+++i is performance-wise more efficient than i++, as the old value of i does not have to be stored for later use. However, the difference is trivial and often optimized the same way by the compiler.
